@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&family=Oswald:wght@200..600&family=Poiret+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body>
+    <div class="main-container">
+      <div id="list-container">
+        <ul id="list"></ul>
+        <button id="add-book-btn" class="add-book-btn">ADD BOOK</button>
+      </div>
+      <div id="add-book-container">
+        <form class="add-book-form" name="addBookForm">
+          <label class="form-label" for="name">NAME:</label><br />
+          <input
+            class="form-input"
+            type="text"
+            name="name"
+            placeholder="NAME"
+            required
+          />
+          <label class="form-label" for="description">DESCRIPTION:</label><br />
+          <textarea
+            class="form-input"
+            name="description"
+            rows="10"
+            cols="100"
+            placeholder="DESCRIPTION"
+            required
+          ></textarea>
+          <label class="form-label" for="rate">RATE:</label><br />
+          <input
+            class="form-input"
+            type="number"
+            max="10"
+            min="0"
+            name="rate"
+            placeholder="RATE"
+            required
+          />
+          <label class="form-label" for="image">IMAGE:</label><br />
+          <input
+            class="form-input"
+            type="file"
+            name="image"
+            placeholder="IMAGE"
+          />
+          <input class="form-btn" type="submit" value="SUBMIT" />
+        </form>
+      </div>
+      <div id="preview-container"></div>
+    </div>
+    <div id="loader"></div>
+    <script src="script.js"></script>
+  </body>
+</html>

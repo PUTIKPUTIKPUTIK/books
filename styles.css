@@ -1,0 +1,242 @@
+* {
+  font-family: "Oswald";
+  scrollbar-width: thin;
+}
+
+.main-container {
+  background-color: rgb(228, 228, 228);
+  border-radius: 30px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  justify-content: space-evenly;
+  gap: 20px;
+  margin: 30px;
+  padding: 20px;
+  height: 500px;
+}
+
+#list-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgb(201, 201, 201);
+  border-radius: 20px;
+  display: flex;
+  position: relative;
+  max-height: 500px;
+  gap: 20px;
+}
+
+#list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  overflow: auto;
+  scrollbar-width: none;
+  max-height: 500px;
+  padding: 20px;
+  margin: 0;
+  gap: 10px;
+}
+
+.book {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: rgb(168, 168, 168);
+  border-radius: 20px;
+  padding: 15px;
+}
+
+.book-img-box {
+  display: flex;
+  width: 40%;
+}
+
+.book-img {
+  height: 100px;
+  box-shadow: 2px 2px 4px #000000;
+}
+
+.book-info-box {
+  display: flex;
+  width: 55%;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.book-name {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.book-description {
+  font-size: 10px;
+  text-align: justify;
+  max-height: 65px;
+  overflow: hidden;
+  scrollbar-width: none;
+  text-overflow: ellipsis;
+  border-radius: 4px;
+  padding: 5px 2px 5px 2px;
+  background-image: linear-gradient(
+    transparent,
+    transparent,
+    transparent,
+    transparent,
+    rgb(102, 102, 102)
+  );
+}
+
+.book-rate-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.open-book-btn {
+  background-color: white;
+  border-radius: 30px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px 20px;
+}
+
+.open-book-btn:hover {
+  cursor: pointer;
+  color: white;
+  background-color: black;
+}
+
+.add-book-btn {
+  background-color: white;
+  font-size: 20px;
+  padding: 10px 30px 10px 30px;
+  border-radius: 30px;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  border: none;
+}
+
+.add-book-btn:hover {
+  cursor: pointer;
+  color: white;
+  background-color: black;
+}
+
+#add-book-container {
+  display: none;
+  background-color: rgb(201, 201, 201);
+  border-radius: 20px;
+}
+
+.add-book-form {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.form-label {
+  font-size: 20px;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.form-input {
+  width: 100%;
+  resize: none;
+  border: none;
+}
+
+.form-btn {
+  font-size: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 30px;
+  margin-top: 80px;
+  border-radius: 30px;
+  border: none;
+  background-color: white;
+}
+
+.form-btn:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+#preview-container {
+  background-color: rgb(201, 201, 201);
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.preview-image-box {
+  display: flex;
+  width: 50%;
+  padding: 20px 20px;
+}
+
+.preview-image {
+  height: 350px;
+  box-shadow: 3px 3px 4px black;
+}
+
+.preview-info-box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px 20px;
+}
+
+.preview-book-name {
+  font-size: 25px;
+  font-weight: 700;
+  text-align: justify;
+}
+
+.preview-book-description {
+  overflow: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: justify;
+  max-height: 300px;
+  scrollbar-width: none;
+  border: 1px solid rgb(144, 144, 144);
+}
+
+.preview-rate-box {
+  display: flex;
+  font-size: 30px;
+  justify-content: space-between;
+}
+
+#loader {
+  display: none;
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  z-index: 10;
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
